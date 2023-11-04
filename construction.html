@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasavi Atlantis-Inspired Website</title>
+</head>
+<style>
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navbar-left{
+    padding-left:c 20px;
+}
+.navbar-right{
+    padding-right: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.a-el{
+    padding:15px;
+}
+.call{
+    border:3px solid goldenrod;
+    background-color:goldenrod;
+}
+.header-content {
+    position: relative;
+}
+.image-container {
+    flex:1;
+    padding:20px;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+#contact-form{
+    color: blueviolet;
+}
+.contact-form-overlay 
+{
+    flex:1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.contact-form-overlay h2 {
+    font-size: 20px;
+}
+.contact-form-overlay p {
+    font-size: 15px;
+}
+button{
+    width:100%;
+    cursor: pointer;
+    padding:10px;
+    background-color: darkblue;
+    color: white;
+    border:none;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: lightblue;
+}
+.image-con{
+    max-width:fit-content;
+    height:auto;
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.image-container1 {
+    flex: 1;
+    padding: 30px;
+}
+.image-container1 img {
+    max-width: 100%;
+    height: auto;
+}
+#info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius:5px;
+}
+.info-box {
+    flex: 1;
+    background-color: #fff;
+    border: 2px solid goldenrod;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.info-box-pair {
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .container h1 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+    }
+
+    .info-box {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
+#con{
+    color:darkblue;
+    font-weight: 20px;
+}
+#con1{
+    color:gold;
+}
+.image-container {
+    position: relative;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.image-info {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+#real{
+    font-weight:100;
+    font-size: 45px;
+}
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+    color: #f8f8f8;
+    text-align: center;
+    line-height: 100%;
+    font-size: 16px;
+}
+.info {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+.boxes1 {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+.boxes1 h1 {
+    margin-bottom: 20px;
+    color:darkblue;
+    text-align: center;
+}
+#amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.b{
+    width: calc(25% - 10px);
+    height: 100px;
+    background-color: #f8f8f8;
+    border: 1px solid goldenrod;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+.container1 {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    background-color:darkblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white; 
+}
+.site {
+    text-align: center;
+}
+
+.site img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.information {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+.information ul, .additional-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.information ul li, .additional-info li {
+    margin: 5px;
+}
+.additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.additional-info li {
+    flex-basis: calc(30% - 10px);
+    margin: 5px;
+    text-align: center;
+    padding: 8px;
+    color:#f8f8f8;
+    font-size: 15px;
+
+}
+#layout{
+    text-align: center;
+}
+.container2 {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    background-color: blue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+#prices {
+    display: flex;
+    justify-content: space-between;
+}
+.price{
+    width: 30%;
+    height: 100px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 10px;
+    color:black;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.review img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.review h3 { 
+  font-size: 20px;
+  color:black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.review p {
+  font-size: 16px;
+  color:black;
+  line-height: 1.5;
+}
+#rev{
+    text-align: center;
+    color:darkblue;
+}
+.footer-logos {
+    display: flex;
+    align-items: center;
+}
+footer {
+  background-color:darkblue;
+  color: #fff;
+  padding: 40px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-column {
+  width: 50%;
+  padding: 0 20px;
+}
+footer h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer li {
+  margin-bottom: 5px;
+}
+footer p {
+  font-size: 16px;
+}
+  
+
+</style>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="Vasavi-Logo-01.png" width="200px" height="100px">
+        </div>
+        <div class="navbar-right">
+           <a class="a-el" href="#con">Why Invest in Hyderabad</a>
+            <a  class="a-el"href="#amenities">Amenities</a>
+            <a class="a-el"href="#info-container">Floor Plans</a>
+            <a  class="a-el"href="#prices">Price</a>
+            <a  class="a-el"href="#reviews">Customer Reviews</a>
+            <a class="call" href="#contact-form">Request Call Back</a>
+        </div>
+    </div>
+    <div class="header-content">
+        <div class="image-container">
+            <img src="Vasavi2.jpg" width="1500px" alt="Your Image">
+            <div class="contact-form-overlay">
+                <h2>ENQUIRE FORM</h2>
+                <p>Fill out the form to get a call back from us.</p>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required><br><br>
+                    <label for="phno">Phone Number:</label>
+                    <input type="number" id="phno" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="mail" id="email" required><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-container1">
+            <img src="vasavi5.jpg" width="600px" height="100px" alt="vasavi">
+        </div>
+        <div class="info-container">
+            <h1 id="con">Should You Really<br>Invest in real estate?</h1>
+            <h2 id="con1">Check if real estate is for you</h2>
+            <div class="info-box-pair">
+                <div class="info-box"><img src="growth.png" width="50px" height="50px">
+                    Property rates increased by <br>an average of 15% YOY</div>
+                <div class="info-box"><img src="salary_10401722.png" width="50px" height="50px">Small,big or large, there's an investment
+                for everyone.</div>
+            </div>
+            <div class="info-box-pair">
+                <div class="info-box"><img src="wallet_4957559.png" width="50px" height="50px">Benefit of stable cash flow,profitable returns
+                and other tax advantages.</div>
+                <div class="info-box"><img src="speedometer_9587085.png" width="50px" height="50px">Risk associated with investment are minimal
+                compared to stock market.</div>
+            </div>
+            <button>Know More</button>
+        </div>
+    </div>
+    <div class="container">
+    <div class="info-container">
+        <h2 id="con">Why invest in India?</h1>
+        <h1 id="con1">Why in Hyderabad?</h2>
+        <div class="info-box-pair">
+            <div class="info-box"><img src="growth_4757486.png" width="50px" height="50px">
+                11% rise in demand in Hyderabad's resedential market.</div>
+            <div class="info-box"><img src="signal_5084979.png" width="50px" height="50px">Hyderabad's real estate market ranks highest 
+            in competition with 8 major cities.</div>
+        </div>
+        <div class="info-box-pair">
+            <div class="info-box"><img src="team_8254091.png" width="50px" height="50px">Migrants prefer this progressive city and 
+            make up to 24% of the population </div>
+            <div class="info-box"><img src="taxes_9945800.png" width="50px" height="50px">Telangana registered 31.44% growth in 
+              IT exports in 2022-23.</div>
+        </div>
+        <button>Chat with us</button></div>
+        <div class="image-container1">
+            <img src="charminar1.jpg" width="700px" alt="vasavi">
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="vasavi4.jpg" alt="Your Image">
+        <div class="image-info">
+            <h1 id="real">What is Vasavi Atlantis?</h1>
+            <p>Created by experienced Vasavi Group with an impeccable 27-year legacyaround the core tenet of 'Happy Living',Vasavi
+                Atlantis<br> has,been designed as 'Investment in Happiness'.<br><br>As you behold the 8 Towers of Vasavi Atlantis rising 
+                into clouds,you will feel Happiness pulsating through you,making your<br> spirit soar.Vasavi Group brings you 4BHK and 3BHK
+                flats for sale in Narsingi.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Delectus fuga placeat ex aut eius 
+                voluptas, tempora aliquid deserunt vitae nobis corrupti fugit
+            </p>
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="info">
+            <h1 id="con">Hyderabad's real estate growth in last 3 years</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non justo aliquam.</p>
+            </div>
+        <div class="box"><img src="salary_10401722.png" width="50px" height="50px">At least 25-45% peak in avearge rental rates</div>
+        <div class="box"><img src="growth.png" width="40px" height="40px">200% rapid increase in investments</div>
+        <div class="box"><img src="taxes_9945800.png" width="40px" height="40px">26% Y0Y growth in property registrations</div>
+        <div class="box"><img src="mortgage_8380931.png" width="40px" height="40px">25% increase in price of 1 sq.ft in real estate</div>
+    </div>
+    <div class="boxes1">
+        <h1>Amenities</h1>
+        <div id="amenities">
+            <div  class="b"><img src="speed_10600030.png" width="60px" height="60px">Fitness Center</div>
+            <div class="b"><img src="aim_732175.png" width="50px" height="50px">Walking & Jogging Track</div>
+            <div class="b"><img src="road_10574521.png" width="50px" height="50px">Cycle park</div>
+            <div class="b"><img src="game_10594175.png" width="50px" height="50px">Badminton</div>
+            <div class="b"><img src="game_10594436.png"width="50px" height="50px">Tennis</div>
+            <div class="b"><img src="game_10594180.png"width="50px" height="50px">Cricket</div>
+            <div class="b"><img src="football_8734201.png" width="50px" height="50px">Football</div>
+            <div class="b"><img src="playground_8881263.png" width="50px" height="50px">Kids Play Area</div>
+            <div class="b"><img src="swimming_8769714.png" width="50px" height="50px">Swimming</div>
+            <div class="b"><img src="massage_8953876.png" width="50px" height="50px">Spa-Saloon</div>
+            <div class="b"><img src="case_6985920.png" width="50px" height="50px">Business Center</div>
+            <div class="b"><img src="baby-stroller_6392265.png" width="50px" height="50px">Day care Creche</div>
+        </div>
+    </div>
+    <div class="container1">
+        <h1 id="layout">Site Layout</h1>
+        <div class="site">
+            <img src="sitelayout.jpg" alt="Site layout">
+        </div>
+        <div class="Information">
+            <ul class="additional-info">
+                <li>1.Entry Gateway with Security</li>
+                <li>2.Main Entry arch</li>
+                <li>3.Entry Water Feature</li>
+                <li>4.Atlantis Arrival Court</li>
+                <li>5.Main Podium</li>
+                <li>6.Pathway-Jogging Track</li>
+                <li>7.Central Axis Focal Water Feature</li>
+                <li>8.Party Lawn</li>
+                <li>9.Seating Pergola</li>
+                <li>10.Pedestrain Bridge</li>
+                <li>11.Seating Deck</li>
+                <li>12.Swing Court</li>
+                <li>13.Temple</li>
+                <li>14.Yoga Lawn</li>
+                <li>15.Pool Deck</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div id="info-container">
+            <h1 id="con1">Floor Plan</h1>
+            <div class="info-box-pair">
+                <div class="info-box">Tower 1</div>
+                <div class="info-box">Tower 2</div>
+                <div class="info-box">Tower 3</div>
+                <div class="info-box">Tower 4</div>
+            </div>
+            <div class="info-box-pair">
+                <div class="info-box">Tower 5 </div>
+                <div class="info-box">Tower 6</div>
+                <div class="info-box">Tower 7</div>
+                <div class="info-box">Tower 8</div>
+            </div>
+            <button id="download-brochure"onclick="downloadBrochure()">Download Brouchure</button></div>
+            <div class="image-container1">
+                <img src="tower1.png" width="700px" alt="tower1">
+            </div>
+        </div>
+        <div class="container2">
+            <h1>Prices</h1>
+            <div id="prices">
+            <div class="price">
+                <p>2BHK<br>1325 Sq.ft</p>
+            </div>
+            <div class="price">
+                <p>3BHK<br>2326 Sq.ft</p>
+            </div>
+            <div class="price">
+                <p>4BHK<br>3426 Sq.ft</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <section id="reviews">
+        <div class="container3">
+          <h2 id="rev">What our Customers Say?</h2>
+          <div class="review">
+            <img src="customer1.jpg" width="250px" height="150px" alt="Customer 1">
+            <h3>John Doe</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in ex id odio aliquam vestibulum. Suspendisse aliquet dapibus dolor, vel iaculis massa pellentesque ut.</p>
+          </div>
+          <div class="review">
+            <img src="customer2.jpg" width="250px" height="200px" alt="Customer 2"><br>
+            <h3>Marie</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio rem fuga reprehenderit aspernatur necessitatibus aliquam commodi libero cum. Pariatur dolorum minima explicabo, perferendis dolorem sed?
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <section id="contact">
+        <div class="container">
+          <div class="footer-column">
+            <img src="Vasavi-Logo-01.png" width="200px" height="100px">
+            <p>Follow us on</p>
+            <div class="footer-logos">
+                <img src="menu_4367374.png" width="50px" height="50px" alt="Logo 1">
+                <img src="facebook_2111275.png" width="50px" height="50px" alt="Logo 2">
+                <img src="twitter_216516.png" width="50px" height="50px" alt="Logo 3">
+                <img src="video_8847631.png" width="50px" height="50px" alt="Logo 4">
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Adress:</h3>
+            <p>Vasavi Constructions LLP,Vasavi Atlantis<br>Sy.No.280/1,Narsingi Village,Gandipet Mandal,<br>Rangareddy,Hyderabad-500075</p>
+          </div>
+          <div class="footer-column">
+            <h3>Email id:</h3>
+            <p>sales@vasaviatlantis.com</p>
+          </div>
+        </div>
+      
+    </div>
+</section>
+      </footer>
+ <script>
+function downloadBrochure() {
+    const brochureUrl = 'D:/Harshitha/Tower-1_merged.pdf';
+    const a = document.createElement('a');
+    a.href = brochureUrl;
+    a.download = 'D:/Harshitha/Tower-1_merged.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>        
+</body>
+</html>
